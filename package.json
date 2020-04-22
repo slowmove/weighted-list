@@ -9,6 +9,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slowmove/weighted-list"
+  },
+  "bugs": {
+    "url": "https://github.com/slowmove/dotenv-loader/issues"
+  },
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "eslint": "^6.8.0",
