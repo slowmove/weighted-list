@@ -10,9 +10,9 @@ class WeightedList extends Set {
 
   /**
    * @param {string} key the value to have a weight
-   * @param {string} weight the weight to reflect its importance
+   * @param {string} [weight] the weight to reflect its importance
    */
-  add(key, weight) {
+  add(key, weight = 1) {
     super.add({ key, weight });
   }
 
