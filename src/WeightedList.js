@@ -19,6 +19,26 @@ class WeightedList extends Set {
   }
 
   /**
+   * Insert your array data into the weighted list
+   *
+   * @param {WeightedListItem[]} source The array from which to create the set
+   */
+  fromArray(source) {
+    source.forEach((item) => {
+      if (typeof item === "string") this.add(item);
+      if (typeof item === "object") {
+        try {
+          this.add(item.key, item.weight);
+        } catch (error) {
+          throw new Error(
+            "Each item in the array must have the properties key and weight"
+          );
+        }
+      }
+    });
+  }
+
+  /**
    * Sort the set by weight, descending (default) or ascending
    *
    * @param {string} [order] DESC or ASC
