@@ -3,6 +3,8 @@ weighted-list
 
 A small package with the concept of weighted list, where you can get items sorted by weight but also get a weighted random item
 
+[![NPM](https://nodei.co/npm/weighted-list.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/weighted-list/)
+
 ## Installation
 ``` npm install --save weighted-list ```
 
