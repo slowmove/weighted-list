@@ -11,10 +11,17 @@ class WeightedList extends Set {
   }
 
   /**
+   * Adding data
+   * If the key already exists, it will update the weight
+   *
    * @param {string} key the value to have a weight
    * @param {string} [weight] the weight to reflect its importance
    */
   add(key, weight = 1) {
+    const existing = this.toArray().find((item) => item.key === key);
+    if (existing) {
+      super.delete(existing);
+    }
     super.add({ key, weight });
   }
 
