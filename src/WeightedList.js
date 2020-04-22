@@ -41,6 +41,9 @@ class WeightedList extends Set {
     return this.values();
   }
 
+  /**
+   * Receive a weigthed random item out of the list
+   */
   random() {
     const list = this.toArray();
     const keys = list.map((item) => item.key);
@@ -61,6 +64,9 @@ class WeightedList extends Set {
     return listByWeights[randomNumber];
   }
 
+  /**
+   * Get the entire set as an Array
+   */
   toArray() {
     return Array.from(this.values());
   }
