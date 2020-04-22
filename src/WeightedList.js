@@ -1,3 +1,5 @@
+require("./WeightedListItem");
+
 /**
  * A superset of the Set Object
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
@@ -20,6 +22,7 @@ class WeightedList extends Set {
    * Sort the set by weight, descending (default) or ascending
    *
    * @param {string} [order] DESC or ASC
+   * @returns {IterableIterator<WeightedListItem>} a set of items, ordered by request
    */
   sort(order = "DESC") {
     const list = this.toArray();
@@ -43,6 +46,7 @@ class WeightedList extends Set {
 
   /**
    * Receive a weigthed random item out of the list
+   * @returns {WeightedListItem} a single randomly, by weight, selected item data
    */
   random() {
     const list = this.toArray();
@@ -66,6 +70,7 @@ class WeightedList extends Set {
 
   /**
    * Get the entire set as an Array
+   * @returns {WeightedListItem[]} an array of the entire set
    */
   toArray() {
     return Array.from(this.values());
