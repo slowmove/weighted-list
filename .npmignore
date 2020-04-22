@@ -1,4 +1,5 @@
 tests
+.vscode
 .babelrc
 .eslintrc.yml
 jest.config.js
