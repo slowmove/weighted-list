@@ -26,6 +26,23 @@ weightedList.add("Vegetables", 2);
 weightedList.add("Wine", 10);
 ```
 
+### fromArray
+
+You can also batch insert data from an array.
+Either as objects with `key` and `weight` or as single strings which will get the default weight (1).
+
+```js
+const WeightedList = require("weighted-list");
+const fruits = [
+  { key: "orange", weight: 10 },
+  { key: "banana", weight: 2 },
+  { key: "apple", weight: 5 }
+];
+
+const weightedList = new WeightedList();
+weightedList.fromArray(fruits);
+```
+
 ### Sort
 
 ```js
